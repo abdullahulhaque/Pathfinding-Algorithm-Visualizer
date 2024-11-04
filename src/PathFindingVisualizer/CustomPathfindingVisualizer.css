@@ -1,0 +1,132 @@
+.visualize-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6a5acd; /* Slate blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.visualize-button:hover {
+  background-color: #483d8b; /* Darker slate blue */
+}
+
+.reset-button {
+  background-color: #d9534f; /* Red */
+}
+
+.reset-button:hover {
+  background-color: #c9302c; /* Darker red */
+}
+
+.custom-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.explanation-tab {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #8a2be2; /* Blue-violet */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+.explanation-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 350px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  color: #333;
+}
+
+.explanation-tab:hover .explanation-content {
+  display: block;
+}
+
+.custom-node {
+  width: 20px;
+  height: 20px;
+  background-color: #e0e0e0; /* Default color */
+  border: 1px solid #ccc;
+  display: inline-block;
+  margin: 1px;
+}
+
+.custom-node-start {
+  background-color: #6a0dad; /* Purple */
+}
+
+.custom-node-finish {
+  background-color: #ff4500; /* Orange */
+}
+
+.custom-node-wall {
+  background-color: #444; /* Dark gray */
+}
+
+.custom-node-visited {
+  background-color: #87ceeb; /* Light blue */
+  animation: visitedAnimation 1.2s linear;
+}
+
+.custom-node-shortest-path {
+  background-color: #32cd32; /* Lime green */
+  animation: shortestPathAnimation 1s linear;
+}
+
+.complexity-tab {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.complexity-tab .complexity-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.complexity-tab:hover .complexity-content {
+  display: block;
+}
+
+
+@keyframes visitedAnimation {
+  0% { transform: scale(0.5); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shortestPathAnimation {
+  0% { background-color: yellow; }
+  100% { background-color: #32cd32; }
+}
